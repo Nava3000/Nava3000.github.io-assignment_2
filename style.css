@@ -1,0 +1,23 @@
+.header {
+  padding: 2px;
+  height: 150px;
+  text-align: center;
+  background: #0060be;
+  color: white;
+  font-size: 30px;
+}
+
+#turtle {
+  border-radius: 50%;
+  border: 7px solid #ddd;
+  border-radius: 10px;
+  width: 150px;
+  margin top;
+}
+#sanji {
+  border-radius: 50%;
+  border: 7px solid #ddd;
+  border-radius: 10px;
+  width: 150px;
+  
+}
