@@ -1,33 +1,34 @@
 <!DOCTYPE html>
-<html>
-  <div class="header">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css" media="screen"/>
-    <h1>Melvin Nava</h1>
-    <img src="http://wboc.images.worldnow.com/images/23445077_BG1.jpg?auto=webp&disable=upscale&width=800" width="128" height="128">
-  </div>
-  <div class="wrapper" id="container">
+<html lang="en">
+  <head>
+    <title>Prof A's Demo Page</title>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+  </head>
 
-    <div class="content">
-
-      <body>
-        <div class="section1">
-          <img src="https://i.redd.it/ti1v42gndzhy.png" width="128" height="128">
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <div class="header">Prof A's Demo Page</div>
+        <button class="button" onclick="clickMe()">
+          Click me to make a change
+        </button>
+        <div class="content">
           <p>
-            "Im going to find the All Blue!"
+            Retro fam narwhal hoodie meggings viral bushwick yr chartreuse.
+            Chartreuse seitan banh mi selfies, woke ennui venmo craft beer. Air
+            plant tumeric retro DIY iPhone poutine. +1 gastropub chillwave,
+            cronut glossier pork belly tacos poke next level fanny pack vegan
+            jianbing lo-fi.
           </p>
         </div>
-        <div class="section2">
-          <h2>
-            <h2>Roles</h2>
-
-            <ol type="1">
-              <li>Lorem ipsum dolor sit amet </li>
-              <li>Lorem ipsum dolor sit amet </li>
-              <li>Lorem ipsum dolor sit amet </li>
-            </ol>
-          </h2>
-        </div>
-      </body>
+        <div class="footer"></div>
+      </div>
     </div>
-  </div>
+    <script>
+      function clickMe() {
+        const content = document.querySelector(".content");
+        content.innerHTML = "Hello world";
+      }
+    </script>
+  </body>
 </html>
