@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Prof A's Demo Page</title>
-    <link rel="stylesheet" type="text/css" href="./style.css" />
-  </head>
 
-  <body>
-    <div class="container">
-      <div class="wrapper">
-        <div class="top">Prof A's Demo Page</div>
-        <button class="activate" onclick="clickMe()">
+<head>
+	<title>Prof A's Demo Page</title>
+	<link rel="stylesheet" type="text/css" href="./style.css" />
+</head>
+
+<body>
+	<div class="container">
+		<div class="wrapper">
+			<div class="top">Prof A's Demo Page</div>
+			<button class="activate" onclick="clickMe()">
           Click me to make a change
         </button>
         <div class="content">
@@ -26,8 +27,37 @@
     </div>
     <script>
       function clickMe() {
+				const top = document.querySelector(".top");
+				top.innerHTML = "Melvin Nava's Lab 4 ";
+				var num = document.getElementsByClassName("top")[0].innerHTML;
+				
+				var splitName = num.substring(0,11); //splice function here to just get name
+				splitName = splitName.replace(/\s/g, '')
+				var firstName = splitName.substring(0,6)
+				var lastName = splitName.substring(6,12)
+				var numlet = firstName.length + lastName.length;
+				top.innerHTML += numlet; 
         const content = document.querySelector(".content");
-        content.innerHTML = "Hello world";     
+        content.innerHTML = "Hello world";
+
+				//first paragraph
+				var firstp = document.createElement("P");
+				firstp.innerHTML = "My name has ";
+				firstp.innerHTML += numlet;
+				firstp.innerHTML += " letters."
+				document.getElementsByClassName("content")[0].appendChild(firstp);
+
+				//second paragraph 
+				var secondp = document.createElement("P");
+				var thirdchar = splitName.substring(2,3);
+				secondp.innerHTML = "The third character in my name is ";
+				secondp.innerHTML += thirdchar.toUpperCase();
+				secondp.innerHTML += ".";
+				var last3 = splitName.substring(7,12)
+				secondp.innerHTML += "<br />" + last3;
+				document.getElementsByClassName("content")[0].appendChild(secondp);
+
+				
       }
     </script>
   </body>
